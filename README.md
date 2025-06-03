@@ -66,5 +66,23 @@ A simple Spring Boot MVC web application to calculate and analyze monthly expens
 └── README.md
 ```
 
+## API Testing
+
+Automated tests were run against [https://fakestoreapi.com/products](https://fakestoreapi.com/products) using RestAssured and JUnit:
+
+- **Test objectives:**
+  - Verify server response code is 200
+  - Confirm each product has:
+    - `title` (not empty)
+    - `price` (not negative)
+    - `rating.rate` (not exceeding 5)
+  - Generate a list of products containing defects
+
+**Test Results (as of last run):**
+- Number of tests: **1**
+- Failures: **0**
+- Success rate: **100%**
+- All products passed the validation checks.
+
 ## License
 This project is for educational/demo purposes. 
