@@ -84,5 +84,30 @@ Automated tests were run against [https://fakestoreapi.com/products](https://fak
 - Success rate: **100%**
 - All products passed the validation checks.
 
+## SQL Queries
+
+**1. Calculate the total sales volume for March 2024:**
+```sql
+SELECT SUM(amount) AS total_sales_march_2024
+FROM orders
+WHERE order_date >= '2024-03-01' AND order_date < '2024-04-01';
+```
+
+**2. Find the customer who spent the most overall:**
+```sql
+SELECT customer, SUM(amount) AS total_spent
+FROM orders
+GROUP BY customer
+ORDER BY total_spent DESC
+LIMIT 1;
+```
+
+**3. Calculate the average order value for the last three months (Jan, Feb, Mar 2024):**
+```sql
+SELECT AVG(amount) AS avg_order_value_last_3_months
+FROM orders
+WHERE order_date >= '2024-01-01' AND order_date < '2024-04-01';
+```
+
 ## License
 This project is for educational/demo purposes. 
