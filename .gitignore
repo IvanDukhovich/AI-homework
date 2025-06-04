@@ -32,3 +32,6 @@ Thumbs.db
 # Other
 node_modules/
 .env 
+
+# Cursor
+.cursor
